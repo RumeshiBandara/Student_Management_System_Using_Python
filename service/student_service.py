@@ -50,3 +50,11 @@ def search_student():
             return
 
     print("Student not found.")
+
+def update_student():
+    students = load_students()
+    student_id = input("Enter Student ID to update: ")
+
+    for student in students:
+        if student["id"] == student_id:
+            print("Leave blank if you do not want to change a field.")
