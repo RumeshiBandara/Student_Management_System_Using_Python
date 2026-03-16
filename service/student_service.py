@@ -20,3 +20,18 @@ def add_student():
     save_students(students)
 
     print("Student added successfully!")
+
+def view_students():
+    students = load_students()
+
+    if len(students) == 0:
+        print("No student records found.")
+        return
+
+    print("\n--- Student Records ---")
+    for student in students:
+        print(f"ID     : {student['id']}")
+        print(f"Name   : {student['name']}")
+        print(f"Age    : {student['age']}")
+        print(f"Course : {student['course']}")
+        print("-" * 25)
