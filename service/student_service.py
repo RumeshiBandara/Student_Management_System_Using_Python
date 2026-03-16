@@ -58,3 +58,18 @@ def update_student():
     for student in students:
         if student["id"] == student_id:
             print("Leave blank if you do not want to change a field.")
+
+            new_name = input(f"Enter new name ({student['name']}): ")
+            new_age = input(f"Enter new age ({student['age']}): ")
+            new_course = input(f"Enter new course ({student['course']}): ")
+
+            if new_name != "":
+                student["name"] = new_name
+            if new_age != "":
+                student["age"] = new_age
+            if new_course != "":
+                student["course"] = new_course
+
+            save_students(students)
+            print("Student updated successfully!")
+            return
