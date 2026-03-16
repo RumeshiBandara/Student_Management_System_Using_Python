@@ -12,3 +12,7 @@ def load_students():
             except json.JSONDecodeError:
                 return []
     return []
+
+def save_students(students):
+    with open(FILE_PATH, "w") as file:
+        json.dump(students, file, indent=4)
