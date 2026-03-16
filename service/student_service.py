@@ -73,3 +73,5 @@ def update_student():
             save_students(students)
             print("Student updated successfully!")
             return
+
+    print("Student not found.")
