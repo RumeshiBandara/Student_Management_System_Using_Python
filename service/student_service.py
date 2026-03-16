@@ -35,3 +35,18 @@ def view_students():
         print(f"Age    : {student['age']}")
         print(f"Course : {student['course']}")
         print("-" * 25)
+
+def search_student():
+    students = load_students()
+    student_id = input("Enter Student ID to search: ")
+
+    for student in students:
+        if student["id"] == student_id:
+            print("\nStudent Found")
+            print(f"ID     : {student['id']}")
+            print(f"Name   : {student['name']}")
+            print(f"Age    : {student['age']}")
+            print(f"Course : {student['course']}")
+            return
+
+    print("Student not found.")
